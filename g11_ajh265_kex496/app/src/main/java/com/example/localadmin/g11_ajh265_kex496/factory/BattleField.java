@@ -31,7 +31,7 @@ public class BattleField {
 
     public void CreateField( Context c, GridLayout g, int size, long id ){
 
-        int sizer =   (int)   ((double) ( size )/ 15) ;
+        int sizer =   (int)   ((double) ( size )/ 16) ;
         for(int x = 0; x < 16; x ++ ) {
             for( int y = 0; y < 16; y ++ ){
                 int num = myWrapper.getGrid()[x][y];
@@ -42,7 +42,7 @@ public class BattleField {
         }
     }
 
-    public void updateDisplay( Context c, GridLayout g, int size, long id,  GridWrapper grid ){
+    public void updateDisplay( long id,  GridWrapper grid ){
 
         myWrapper = grid;
 
