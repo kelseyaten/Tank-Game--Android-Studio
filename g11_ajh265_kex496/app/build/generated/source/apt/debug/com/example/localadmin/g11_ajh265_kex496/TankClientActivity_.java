@@ -82,14 +82,14 @@ public final class TankClientActivity_
     }
 
     @Override
-    public void startPoll() {
+    public void joinAsync() {
         BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
 
 
             @Override
             public void execute() {
                 try {
-                    TankClientActivity_.super.startPoll();
+                    TankClientActivity_.super.joinAsync();
                 } catch (Throwable e) {
                     Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
                 }
@@ -118,14 +118,14 @@ public final class TankClientActivity_
     }
 
     @Override
-    public void updateDisplay() {
+    public void startPoll() {
         BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
 
 
             @Override
             public void execute() {
                 try {
-                    TankClientActivity_.super.updateDisplay();
+                    TankClientActivity_.super.startPoll();
                 } catch (Throwable e) {
                     Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
                 }
@@ -136,14 +136,14 @@ public final class TankClientActivity_
     }
 
     @Override
-    public void joinAsync() {
+    public void updateDisplay() {
         BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
 
 
             @Override
             public void execute() {
                 try {
-                    TankClientActivity_.super.joinAsync();
+                    TankClientActivity_.super.updateDisplay();
                 } catch (Throwable e) {
                     Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
                 }
