@@ -12,6 +12,15 @@ import com.example.localadmin.g11_ajh265_kex496.R;
  */
 public class EmptyCell extends CellObject {
 
+    public ImageView getMyView() {
+        return myView;
+    }
+
+    public void setMyView(ImageView myView) {
+        this.myView = myView;
+    }
+
+    ImageView myView;
 
     public EmptyCell(){
 
@@ -19,15 +28,23 @@ public class EmptyCell extends CellObject {
     }
 
 
-    public void display( Context c, GridLayout g, int size, long id ){
+    public ImageView display( Context c, GridLayout g, int size, long id ){
 
 
-        ImageView m = new ImageView( c );
-        m.setImageResource(R.drawable.grass);
+        myView = new ImageView( c );
+        myView.setImageResource(R.drawable.grass);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(size, size);
-        m.setLayoutParams(layoutParams);
-        g.addView(m);
+        myView.setLayoutParams(layoutParams);
+        g.addView(myView);
+        return myView;
 
+
+    }
+
+    public int updateDisplay( long paramid  ){
+
+        myView.setImageResource(R.drawable.grass );
+        return R.drawable.grass;
 
     }
 

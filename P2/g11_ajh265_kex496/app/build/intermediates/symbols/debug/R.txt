@@ -554,9 +554,10 @@ int drawable design_fab_background 0x7f020045
 int drawable design_snackbar_background 0x7f020046
 int drawable grass 0x7f020047
 int drawable mytank 0x7f020048
-int drawable notification_template_icon_bg 0x7f02004b
+int drawable notification_template_icon_bg 0x7f02004c
 int drawable tank 0x7f020049
-int drawable wall 0x7f02004a
+int drawable test 0x7f02004a
+int drawable wall 0x7f02004b
 int id action0 0x7f0c0071
 int id action_bar 0x7f0c005a
 int id action_bar_activity_content 0x7f0c0000

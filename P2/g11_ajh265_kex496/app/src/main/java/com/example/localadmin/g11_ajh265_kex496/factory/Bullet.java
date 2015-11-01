@@ -15,6 +15,17 @@ public class Bullet extends CellObject {
     int id;
     int damage;
 
+    public ImageView getMyView() {
+        return myView;
+    }
+
+    public void setMyView(ImageView myView) {
+        this.myView = myView;
+    }
+
+    ImageView myView;
+
+
     public Bullet( int x ){
 
         id = (( x - (x % 1000)) / 1000) - 2000;
@@ -22,15 +33,23 @@ public class Bullet extends CellObject {
 
     }
 
-    public void display( Context c, GridLayout g, int size, long id ){
+    public ImageView display( Context c, GridLayout g, int size, long id ){
 
 
-        ImageView m = new ImageView( c );
-        m.setImageResource(R.drawable.grass);
+        myView = new ImageView( c );
+        myView.setImageResource(R.drawable.grass);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(size, size);
-        m.setLayoutParams(layoutParams);
-        g.addView(m);
+        myView.setLayoutParams(layoutParams);
+        g.addView(myView);
+        return myView;
+    }
 
+
+    public int updateDisplay( long paramid  ){
+
+
+        myView.setImageResource( R.drawable.grass);
+       return R.drawable.grass;
 
     }
 

@@ -16,6 +16,17 @@ public class Tank extends CellObject {
     int life;
     int direction;
 
+    public ImageView getMyView() {
+        return myView;
+    }
+
+    public void setMyView(ImageView myView) {
+        this.myView = myView;
+    }
+
+    ImageView myView;
+
+
     public Tank(int x){
 
         direction = x % 10;
@@ -25,22 +36,37 @@ public class Tank extends CellObject {
     }
 
 
-    public void display( Context c, GridLayout g, int size, long paramid ){
 
 
-        ImageView m = new ImageView( c );
 
+    public ImageView display( Context c, GridLayout g, int size, long paramid ){
 
+        myView = new ImageView( c );
         if( paramid == id ) {
-            m.setImageResource(R.drawable.mytank);
+            myView.setImageResource(R.drawable.mytank);
         }else{
-            m.setImageResource(R.drawable.tank);
-
+            myView.setImageResource(R.drawable.tank);
         }
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(size, size);
-        m.setLayoutParams(layoutParams);
-        g.addView(m);
+        myView.setLayoutParams(layoutParams);
+        g.addView(myView);
 
+        return myView;
+    }
+
+
+    public int updateDisplay( long paramid  ){
+
+        if( paramid == id ) {
+
+            myView.setImageResource(R.drawable.mytank);
+
+           return R.drawable.mytank;
+        }else{
+
+            myView.setImageResource(R.drawable.tank);
+           return R.drawable.tank;
+        }
 
     }
 }

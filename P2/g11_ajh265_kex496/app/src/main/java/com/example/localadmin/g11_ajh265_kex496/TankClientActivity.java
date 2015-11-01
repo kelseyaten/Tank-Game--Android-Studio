@@ -32,8 +32,10 @@ public class TankClientActivity extends AppCompatActivity {
     BulletZoneRestClient restClient;
 
     private long tankId = -1;
-    GridWrapper grid;
-    boolean gameRunning = true;
+    private GridWrapper grid;
+    private boolean gameRunning = true;
+    private BattleField myField;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,24 +59,25 @@ public class TankClientActivity extends AppCompatActivity {
 
         joinAsync();
         SystemClock.sleep(500);
-
-
+        getField();
+        SystemClock.sleep(500);
         GridLayout myGridLayout = (GridLayout)findViewById(R.id.gridLayout);
+
+        myField = new BattleField( grid );
+        myField.CreateField( getApplicationContext(), myGridLayout, getSize(), tankId );
+        startPoll();
+
+
+
+    }
+
+
+    public int getSize(){
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
-
-        EntityFactory[][] myArray = new EntityFactory[16][16];
-
-
-
-        EntityFactory myFactory = new EntityFactory();
-
-        BattleField myField = new BattleField( grid );
-
-
-
+        return size.x;
     }
 
     @Background
@@ -82,7 +85,6 @@ public class TankClientActivity extends AppCompatActivity {
         try {
             tankId = restClient.join().getResult();
             Log.d(TAG, "tankId is " + tankId);
-            startPoll();
         } catch (Exception e) {
 
             Log.d(TAG, "FAILED");
@@ -94,7 +96,7 @@ public class TankClientActivity extends AppCompatActivity {
     void getField() {
         try {
             grid = restClient.grid();
-            Log.d(TAG, "Got Grid" );
+
         } catch (Exception e) {
 
         }
@@ -113,15 +115,23 @@ public class TankClientActivity extends AppCompatActivity {
          }
     }
 
+
     @Background
     public void updateDisplay(){
 
-        grid.getGrid();
-        for( int x = 0; x <  grid.getGrid().length ; x ++  ){
-            for( int y = 0; y < grid.getGrid()[0].length; y ++ ){
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                GridLayout myGridLayout = (GridLayout) findViewById(R.id.gridLayout);
+                myField.updateDisplay(getApplicationContext(), myGridLayout, getSize(), tankId, grid);
 
             }
-        }
+        });
+
+
+
     }
 
 }
