@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/localadmin/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.3.0/f5e853a20b60758922453d56f9ae1e64af5cb3da/jackson-annotations-2.3.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f5e853a20b60758922453d56f9ae1e64af5cb3da">
+        <dex dex="/Users/localadmin/Desktop/P2/g11_ajh265_kex496/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.3.0-46ceb44efa6124a02782fa1ef6708b12a5672892.jar" />
+    </item>
+    <item
+        jar="/Users/localadmin/.gradle/caches/modules-2/files-2.1/org.springframework.android/spring-android-rest-template/1.0.1.RELEASE/e132d929bd181941f79b0d63edafb8a86ae6fd33/spring-android-rest-template-1.0.1.RELEASE.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e132d929bd181941f79b0d63edafb8a86ae6fd33">
+        <dex dex="/Users/localadmin/Desktop/P2/g11_ajh265_kex496/app/build/intermediates/pre-dexed/debug/spring-android-rest-template-1.0.1.RELEASE-f4ef3cc82755ebcf65ed7b4c98c81f1de8ed5109.jar" />
+    </item>
+    <item
+        jar="/Users/localadmin/Desktop/P2/g11_ajh265_kex496/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/Users/localadmin/Desktop/P2/g11_ajh265_kex496/app/build/intermediates/pre-dexed/debug/classes-bc909464cc979f619f8f2e2ef92b85a08d30b990.jar" />
+    </item>
+    <item
+        jar="/Users/localadmin/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.3.2/559b70ac8a0d5cad611da4223137a920147201ba/jackson-core-2.3.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="559b70ac8a0d5cad611da4223137a920147201ba">
+        <dex dex="/Users/localadmin/Desktop/P2/g11_ajh265_kex496/app/build/intermediates/pre-dexed/debug/jackson-core-2.3.2-e50ca3502a18e36ca1011eab7ed53e93a69a9649.jar" />
+    </item>
+    <item
+        jar="/Users/localadmin/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.3.2/c75edc740a6d8cb1cef6fa82fa594e0bce561916/jackson-databind-2.3.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c75edc740a6d8cb1cef6fa82fa594e0bce561916">
+        <dex dex="/Users/localadmin/Desktop/P2/g11_ajh265_kex496/app/build/intermediates/pre-dexed/debug/jackson-databind-2.3.2-31cb9cfa74e85bc5bec843cea03be0f7eb693a53.jar" />
+    </item>
+    <item
+        jar="/Users/localadmin/.gradle/caches/modules-2/files-2.1/org.springframework.android/spring-android-core/1.0.1.RELEASE/e68f0e8e4b636ee30c4de58953be38d9b72a5e3b/spring-android-core-1.0.1.RELEASE.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e68f0e8e4b636ee30c4de58953be38d9b72a5e3b">
+        <dex dex="/Users/localadmin/Desktop/P2/g11_ajh265_kex496/app/build/intermediates/pre-dexed/debug/spring-android-core-1.0.1.RELEASE-707940723945a4e87b36caa94382f460dabde349.jar" />
+    </item>
+    <item
+        jar="/Users/localadmin/.gradle/caches/modules-2/files-2.1/com.squareup/otto/1.3.5/7941cd2c2c8ec006800d75c35f8a9dacf892ab93/otto-1.3.5.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7941cd2c2c8ec006800d75c35f8a9dacf892ab93">
+        <dex dex="/Users/localadmin/Desktop/P2/g11_ajh265_kex496/app/build/intermediates/pre-dexed/debug/otto-1.3.5-b9d93cd551d705766e5d8064cb80ca958b4a1617.jar" />
+    </item>
+    <item
+        jar="/Users/localadmin/Desktop/P2/g11_ajh265_kex496/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="/Users/localadmin/Desktop/P2/g11_ajh265_kex496/app/build/intermediates/pre-dexed/debug/classes-45d86be9de2464b76270e6d921089d7e277e7134.jar" />
+    </item>
+    <item
+        jar="/Users/localadmin/.gradle/caches/modules-2/files-2.1/org.androidannotations/androidannotations-api/3.1/ac33174269a767fcbf3a944cdb3d52e07ef93bee/androidannotations-api-3.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ac33174269a767fcbf3a944cdb3d52e07ef93bee">
+        <dex dex="/Users/localadmin/Desktop/P2/g11_ajh265_kex496/app/build/intermediates/pre-dexed/debug/androidannotations-api-3.1-37ada2350318598f5242307a051098a3d38effda.jar" />
+    </item>
+
+</items>
