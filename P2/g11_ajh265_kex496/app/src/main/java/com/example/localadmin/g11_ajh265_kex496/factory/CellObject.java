@@ -16,14 +16,11 @@ public abstract class CellObject {
     public void setValue(int value) {
         this.value = value;
     }
-
     int value;
 
     public abstract ImageView getMyView();
     public abstract void setMyView( ImageView v );
-
     public abstract ImageView display( Context c, GridLayout g, int size, long id );
-
     public abstract int updateDisplay( long paramid  );
 
 
