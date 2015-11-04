@@ -15,7 +15,7 @@ public class EntityFactory {
 
     }
 
-    public CellObject createEntity( int n ){
+    public CellObject createEntity( int n, long id ){
 
         if( n == 0 ){
 
@@ -41,6 +41,7 @@ public class EntityFactory {
 
             myObject = new Tank( n );
             myObject.setValue( n );
+            ((Tank)myObject).setMyTanksId(id );
 
         }
 

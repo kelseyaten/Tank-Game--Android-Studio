@@ -2,6 +2,7 @@ package com.example.localadmin.g11_ajh265_kex496.factory;
 
 import android.content.Context;
 import android.widget.GridLayout;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -13,8 +14,9 @@ import com.example.localadmin.g11_ajh265_kex496.R;
 public class Tank extends CellObject {
 
     long id;
-    int life;
-    int direction;
+    long life;
+    long direction;
+    long myTankId;
 
     public ImageView getMyView() {
         return myView;
@@ -27,7 +29,7 @@ public class Tank extends CellObject {
     ImageView myView;
 
 
-    public Tank(int x){
+    public Tank(long x){
 
         direction = x % 10;
         life = ( (x % 10000) - direction ) / 10;
@@ -36,22 +38,23 @@ public class Tank extends CellObject {
     }
 
 
+    public void setMyTanksId( long x ){
+        myTankId = x;
+    }
 
 
 
-    public ImageView display( Context c, GridLayout g, int size, long paramid ){
+    public int display(  long paramid  ){
 
-        myView = new ImageView( c );
-        if( paramid == id ) {
-            myView.setImageResource(R.drawable.mytank);
+
+        int x = 0;
+        if( id == myTankId ) {
+            x = R.drawable.mytank;
         }else{
-            myView.setImageResource(R.drawable.tank);
+            x = R.drawable.tank;
         }
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(size, size);
-        myView.setLayoutParams(layoutParams);
-        g.addView(myView);
 
-        return myView;
+        return x;
     }
 
 

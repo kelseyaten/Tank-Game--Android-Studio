@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
+import com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter_;
 import com.example.localadmin.g11_ajh265_kex496.rest.BulletZoneRestClient_;
 import org.androidannotations.api.BackgroundExecutor;
 import org.androidannotations.api.SdkVersionHelper;
@@ -35,6 +36,7 @@ public final class TankClientActivity_
 
     private void init_(Bundle savedInstanceState) {
         restClient = new BulletZoneRestClient_(this);
+        mGridAdapter = GridAdapter_.getInstance_(this);
         OnViewChangedNotifier.registerOnViewChangedListener(this);
     }
 
@@ -82,14 +84,14 @@ public final class TankClientActivity_
     }
 
     @Override
-    public void getField() {
+    public void fire() {
         BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
 
 
             @Override
             public void execute() {
                 try {
-                    TankClientActivity_.super.getField();
+                    TankClientActivity_.super.fire();
                 } catch (Throwable e) {
                     Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
                 }
@@ -136,6 +138,24 @@ public final class TankClientActivity_
     }
 
     @Override
+    public void updateDisplay() {
+        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
+
+
+            @Override
+            public void execute() {
+                try {
+                    TankClientActivity_.super.updateDisplay();
+                } catch (Throwable e) {
+                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+                }
+            }
+
+        }
+        );
+    }
+
+    @Override
     public void move(final int dir) {
         BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
 
@@ -154,14 +174,14 @@ public final class TankClientActivity_
     }
 
     @Override
-    public void updateDisplay() {
+    public void getField() {
         BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
 
 
             @Override
             public void execute() {
                 try {
-                    TankClientActivity_.super.updateDisplay();
+                    TankClientActivity_.super.getField();
                 } catch (Throwable e) {
                     Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
                 }

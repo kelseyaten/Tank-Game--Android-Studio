@@ -2,6 +2,7 @@ package com.example.localadmin.g11_ajh265_kex496.factory;
 
 import android.content.Context;
 import android.widget.GridLayout;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -27,20 +28,13 @@ public class Wall extends CellObject {
 
     }
 
-    public ImageView display( Context c, GridLayout g, int size, long id ){
+    public int display( long id ){
 
-
-        myView = new ImageView( c );
-        myView.setImageResource(R.drawable.wall);
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(size, size);
-        myView.setLayoutParams(layoutParams);
-        g.addView(myView);
-        return myView;
-
+        return R.drawable.wall;
 
     }
 
-    public int updateDisplay(long paramid  ){
+    public int updateDisplay( long paramid  ){
 
 
         myView.setImageResource(R.drawable.wall);
