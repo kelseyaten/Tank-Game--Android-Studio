@@ -2,6 +2,7 @@ package com.example.localadmin.g11_ajh265_kex496.factory;
 
 import android.content.Context;
 import android.widget.GridLayout;
+import android.widget.GridView;
 import android.widget.ImageView;
 
 /**
@@ -20,7 +21,7 @@ public abstract class CellObject {
 
     public abstract ImageView getMyView();
     public abstract void setMyView( ImageView v );
-    public abstract ImageView display( Context c, GridLayout g, int size, long id );
+    public abstract int display( long id );
     public abstract int updateDisplay( long paramid  );
 
 
