@@ -36,7 +36,6 @@ public class Wall extends CellObject {
 
     public int updateDisplay( long paramid  ){
 
-
         myView.setImageResource(R.drawable.wall);
         return R.drawable.wall;
     }

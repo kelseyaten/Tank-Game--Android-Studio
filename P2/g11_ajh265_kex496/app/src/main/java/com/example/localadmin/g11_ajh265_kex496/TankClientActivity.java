@@ -49,7 +49,7 @@ public class TankClientActivity extends AppCompatActivity {
 
     }
 
-    @Click({R.id.buttonLeft, R.id.buttonRight, R.id.buttonUp, R.id.buttonDown, R.id.buttonFire})
+    @Click({R.id.buttonLeft, R.id.buttonRight, R.id.buttonUp, R.id.buttonDown, R.id.buttonFire, R.id.buttonTurnLeft, R.id.buttonTurnRight})
     void onClick( View v ) {
 
         myImplementation.clicked( v );

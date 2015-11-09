@@ -18,6 +18,7 @@ public class BattleField {
     CellObject[][] objectArray = new CellObject[16][16];
 
 
+
     public BattleField( GridWrapper m ){
 
         for( int x = 0 ; x < 16; x ++ ){
@@ -30,11 +31,26 @@ public class BattleField {
 
 
 
+
     public int setView( int x, int y, long val, long tankId ){
 
         EntityFactory myFactory = new EntityFactory();
         objectArray[x][y] = myFactory.createEntity((int)val, tankId);
-        return objectArray[x][y].display( val );
+        if( objectArray[x][y] instanceof Tank ){
+
+            ((Tank)objectArray[x][y]).setMyTanksId(tankId);
+
+
+            return objectArray[x][y].display( tankId );
+        }else{
+
+            return objectArray[x][y].display( val );
+
+        }
+
+
+
+
 
     }
 
