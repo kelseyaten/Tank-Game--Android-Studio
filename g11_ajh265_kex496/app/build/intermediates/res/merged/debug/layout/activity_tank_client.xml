@@ -88,6 +88,18 @@
             android:layout_above="@+id/buttonDown"
             android:layout_toRightOf="@+id/buttonFire" />
 
+        <ImageButton
+            android:id="@+id/buttonTurnRight"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:tag="1"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/turnright"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_above="@+id/buttonRight"
+            android:layout_toRightOf="@+id/buttonUp" />
+
 
 
     </RelativeLayout>
