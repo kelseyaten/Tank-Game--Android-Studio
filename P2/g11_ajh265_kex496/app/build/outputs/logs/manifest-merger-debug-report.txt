@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml:2:1-35:12
+ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml:2:1-36:12
 	package
 		ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml:3:5-55
 		INJECTED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml
@@ -55,13 +55,13 @@ ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/mai
 	android:name
 		ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml:24:13-48
 uses-permission#android.permission.INTERNET
-ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml:32:5-67
+ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml:33:5-67
 	android:name
-		ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml:32:22-64
+		ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml:33:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml:33:5-79
+ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml:34:5-79
 	android:name
-		ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml:33:22-76
+		ADDED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml:34:22-76
 uses-sdk
 INJECTED from /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.1.0] /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/AndroidManifest.xml:20:5-43

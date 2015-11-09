@@ -9,10 +9,10 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
-import com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter_;
-import com.example.localadmin.g11_ajh265_kex496.rest.BulletZoneRestClient_;
-import org.androidannotations.api.BackgroundExecutor;
+import com.example.localadmin.g11_ajh265_kex496.R.id;
+import com.example.localadmin.g11_ajh265_kex496.rest.RestClientImplementation_;
 import org.androidannotations.api.SdkVersionHelper;
 import org.androidannotations.api.builder.ActivityIntentBuilder;
 import org.androidannotations.api.view.HasViews;
@@ -35,9 +35,8 @@ public final class TankClientActivity_
     }
 
     private void init_(Bundle savedInstanceState) {
-        restClient = new BulletZoneRestClient_(this);
-        mGridAdapter = GridAdapter_.getInstance_(this);
         OnViewChangedNotifier.registerOnViewChangedListener(this);
+        myImplementation = RestClientImplementation_.getInstance_(this);
     }
 
     @Override
@@ -80,115 +79,82 @@ public final class TankClientActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
+        {
+            View view = hasViews.findViewById(id.buttonLeft);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TankClientActivity_.this.onClick(view);
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.buttonRight);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TankClientActivity_.this.onClick(view);
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.buttonUp);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TankClientActivity_.this.onClick(view);
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.buttonDown);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TankClientActivity_.this.onClick(view);
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.buttonFire);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TankClientActivity_.this.onClick(view);
+                    }
+
+                }
+                );
+            }
+        }
         afterViewInjection();
-    }
-
-    @Override
-    public void fire() {
-        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
-
-
-            @Override
-            public void execute() {
-                try {
-                    TankClientActivity_.super.fire();
-                } catch (Throwable e) {
-                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
-                }
-            }
-
-        }
-        );
-    }
-
-    @Override
-    public void joinAsync() {
-        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
-
-
-            @Override
-            public void execute() {
-                try {
-                    TankClientActivity_.super.joinAsync();
-                } catch (Throwable e) {
-                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
-                }
-            }
-
-        }
-        );
-    }
-
-    @Override
-    public void startPoll() {
-        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
-
-
-            @Override
-            public void execute() {
-                try {
-                    TankClientActivity_.super.startPoll();
-                } catch (Throwable e) {
-                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
-                }
-            }
-
-        }
-        );
-    }
-
-    @Override
-    public void updateDisplay() {
-        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
-
-
-            @Override
-            public void execute() {
-                try {
-                    TankClientActivity_.super.updateDisplay();
-                } catch (Throwable e) {
-                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
-                }
-            }
-
-        }
-        );
-    }
-
-    @Override
-    public void move(final int dir) {
-        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
-
-
-            @Override
-            public void execute() {
-                try {
-                    TankClientActivity_.super.move(dir);
-                } catch (Throwable e) {
-                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
-                }
-            }
-
-        }
-        );
-    }
-
-    @Override
-    public void getField() {
-        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
-
-
-            @Override
-            public void execute() {
-                try {
-                    TankClientActivity_.super.getField();
-                } catch (Throwable e) {
-                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
-                }
-            }
-
-        }
-        );
     }
 
     public static class IntentBuilder_
