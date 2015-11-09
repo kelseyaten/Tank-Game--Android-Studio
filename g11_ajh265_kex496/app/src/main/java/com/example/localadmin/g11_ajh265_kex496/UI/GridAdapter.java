@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.localadmin.g11_ajh265_kex496.R;
 import com.example.localadmin.g11_ajh265_kex496.factory.BattleField;
+import com.example.localadmin.g11_ajh265_kex496.factory.Tank;
 import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
 
 import org.androidannotations.annotations.EBean;
@@ -29,16 +30,11 @@ public class GridAdapter extends BaseAdapter {
     @SystemService
     protected LayoutInflater inflater;
     private int[][] mEntities = new int[16][16];
-    private Context myContext;
-    private long tankId;
 
+    private long tankId;
     private BattleField myField;
 
 
-
-    public void setContext( Context c  ){
-        myContext = c;
-    }
 
     public void setTankID( long x ){
 

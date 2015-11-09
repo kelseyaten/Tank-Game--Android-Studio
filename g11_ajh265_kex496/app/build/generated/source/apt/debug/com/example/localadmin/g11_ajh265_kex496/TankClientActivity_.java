@@ -154,6 +154,36 @@ public final class TankClientActivity_
                 );
             }
         }
+        {
+            View view = hasViews.findViewById(id.buttonTurnLeft);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TankClientActivity_.this.onClick(view);
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.buttonTurnRight);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        TankClientActivity_.this.onClick(view);
+                    }
+
+                }
+                );
+            }
+        }
         afterViewInjection();
     }
 

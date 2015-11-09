@@ -1,5 +1,7 @@
 package com.example.localadmin.g11_ajh265_kex496.factory;
 
+import com.example.localadmin.g11_ajh265_kex496.R;
+
 /**
  * Created by localadmin on 10/31/15.
  */
@@ -10,6 +12,12 @@ public class DestructableWall extends Wall {
     public DestructableWall( int n ){
 
         life = n;
+    }
+
+    public int updateDisplay( long paramid  ){
+
+        myView.setImageResource(R.drawable.destructablewall);
+        return R.drawable.destructablewall;
     }
 
 

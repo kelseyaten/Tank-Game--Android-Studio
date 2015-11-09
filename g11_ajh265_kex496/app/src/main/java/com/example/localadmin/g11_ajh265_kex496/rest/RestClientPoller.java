@@ -47,7 +47,7 @@ public class RestClientPoller {
 
         mGridAdapter.updateList(grid);
         mGridAdapter.setTankID(tankId);
-        mGridAdapter.setContext(myContext);
+
         ((GridView)myGridView).setAdapter(mGridAdapter);
 
         startPoll();

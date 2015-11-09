@@ -91,14 +91,22 @@
         <ImageButton
             android:id="@+id/buttonTurnRight"
             android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:tag="1"
+            android:layout_height="80dp"
             android:layout_alignParentRight="true"
             android:src="@drawable/turnright"
             android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
             android:layout_above="@+id/buttonRight"
-            android:layout_toRightOf="@+id/buttonUp" />
+             />
+
+        <ImageButton
+            android:id="@+id/buttonTurnLeft"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/turnleft"
+            android:scaleType="fitCenter"
+            android:layout_above="@+id/buttonLeft"
+            />
 
 
 

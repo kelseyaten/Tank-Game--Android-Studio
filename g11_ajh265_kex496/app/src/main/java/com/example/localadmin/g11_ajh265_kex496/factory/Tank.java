@@ -37,39 +37,63 @@ public class Tank extends CellObject {
 
     }
 
+    public long getDirection(){
+        return direction;
+    }
 
     public void setMyTanksId( long x ){
         myTankId = x;
+
     }
 
+    public long getMyTanksId(  ){
+
+        return myTankId;
+    }
 
 
     public int display(  long paramid  ){
 
 
-        int x = 0;
-        if( id == myTankId ) {
-            x = R.drawable.mytank;
-        }else{
-            x = R.drawable.tank;
-        }
+        int resource = 0;
 
-        return x;
+        if( paramid == id ) {
+
+            switch((int)direction){
+                case 0: resource = R.drawable.tankup;
+                    break;
+                case 2: resource = R.drawable.tankright;
+                    break;
+                case 4: resource = R.drawable.tankdown;
+                    break;
+                case 6: resource = R.drawable.tankleft;
+                    break;
+            }
+
+
+            return resource;
+        }else{
+
+            switch((int)direction){
+                case 0: resource = R.drawable.enemyup;
+                    break;
+                case 2: resource = R.drawable.enemyright;
+                    break;
+                case 4: resource = R.drawable.enemydown;
+                    break;
+                case 6: resource = R.drawable.enemyleft;
+                    break;
+            }
+
+
+            return resource;
+        }
     }
 
 
     public int updateDisplay( long paramid  ){
 
-        if( paramid == id ) {
-
-            myView.setImageResource(R.drawable.mytank);
-
-           return R.drawable.mytank;
-        }else{
-
-            myView.setImageResource(R.drawable.tank);
-           return R.drawable.tank;
-        }
+       return -1;
 
     }
 }
