@@ -6,14 +6,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.localadmin.g11_ajh265_kex496.rest.BulletZoneRestClient;
-import com.example.localadmin.g11_ajh265_kex496.rest.RestClientImplementation;
+import com.example.localadmin.g11_ajh265_kex496.rest.Controller;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.rest.RestService;
 
 
 @EActivity
@@ -22,7 +20,7 @@ public class TankClientActivity extends AppCompatActivity {
 
 
     @Bean
-    RestClientImplementation myImplementation;
+    Controller myController;
 
 
     @Override
@@ -45,14 +43,14 @@ public class TankClientActivity extends AppCompatActivity {
     @AfterViews
     protected void afterViewInjection() {
 
-        myImplementation.implement( findViewById(R.id.gridView));
+        myController.implement( findViewById(R.id.gridView));
 
     }
 
     @Click({R.id.buttonLeft, R.id.buttonRight, R.id.buttonUp, R.id.buttonDown, R.id.buttonFire, R.id.buttonTurnLeft, R.id.buttonTurnRight})
     void onClick( View v ) {
 
-        myImplementation.clicked( v );
+        myController.clicked( v );
 
     }
 
