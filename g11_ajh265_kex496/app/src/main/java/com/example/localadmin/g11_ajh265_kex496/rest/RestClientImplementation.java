@@ -37,6 +37,9 @@ public class RestClientImplementation  {
     @Bean
     RestClientPoller myPoller;
 
+    @Bean
+    UIUpdate myUIUpdate;
+
     private static final String TAG = "TankClientActivity";
     private long tankId;
     private int direction;
@@ -49,7 +52,10 @@ public class RestClientImplementation  {
 
     public void implement( View myGridView ){
 
-        tankId =  myPoller.startPolling( myGridView );
+        myPoller.addObserver( myUIUpdate);
+
+        tankId = myUIUpdate.join( myGridView );
+        myPoller.startPoll();
     }
 
 
