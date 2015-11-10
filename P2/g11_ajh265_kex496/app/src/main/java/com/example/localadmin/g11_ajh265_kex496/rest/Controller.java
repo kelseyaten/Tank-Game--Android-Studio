@@ -1,32 +1,23 @@
 package com.example.localadmin.g11_ajh265_kex496.rest;
 
-import android.content.Context;
-import android.os.SystemClock;
-import android.support.annotation.UiThread;
 import android.util.Log;
 import android.view.View;
-import android.widget.GridView;
 
 import com.example.localadmin.g11_ajh265_kex496.R;
 import com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter;
-import com.example.localadmin.g11_ajh265_kex496.factory.EntityFactory;
 import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
 
 import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EBean;
-import org.androidannotations.annotations.Click;
-import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.EApplication;
 import org.androidannotations.annotations.rest.RestService;
 
 /**
- * Created by localadmin on 11/9/15.
+ * Created by localadmin on 11/10/15.
  */
 
-
 @EBean
-public class RestClientImplementation  {
+public class Controller {
 
     @RestService
     BulletZoneRestClient restClient;
@@ -45,7 +36,7 @@ public class RestClientImplementation  {
     private int direction;
 
 
-    public RestClientImplementation( ){
+    public Controller( ){
 
         tankId = -1;
     }
@@ -108,7 +99,7 @@ public class RestClientImplementation  {
                     if( compTankid == tankId ){
 
                         direction = (int )id % 10;
-                       // Log.d(TAG, "%d"  + (int) dir );
+                        // Log.d(TAG, "%d"  + (int) dir );
                     }
 
 
@@ -218,8 +209,6 @@ public class RestClientImplementation  {
         }
 
     }
-
-
 
 
 }

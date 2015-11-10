@@ -9652,3 +9652,77 @@ protected com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter mGridAdapter;
 13:18:50.211 [Daemon worker Thread 8] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.rest.UIUpdate_
 13:18:50.217 [Daemon worker Thread 8] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 139 ms], [Generate Sources = 51 ms], [Process Annotations = 47 ms], [Validate Annotations = 16 ms], [Find R Classes = 9 ms], [Extract Annotations = 5 ms], [Extract Manifest = 3 ms], 
 13:18:50.217 [Daemon worker Thread 8] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+13:23:59.977 [Daemon worker Thread 9] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {androidManifestFile=/Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/build/intermediates/manifests/full/debug/AndroidManifest.xml}
+13:24:00.25 [Daemon worker Thread 9] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 14 annotations on 25 elements
+13:24:00.35 [Daemon worker Thread 9] DEBUG o.a.h.AndroidManifestFinder:98 - AndroidManifest.xml file found with specified path: /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/build/intermediates/manifests/full/debug/AndroidManifest.xml
+13:24:00.38 [Daemon worker Thread 9] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.localadmin.g11_ajh265_kex496, componentQualifiedNames=[com.example.localadmin.g11_ajh265_kex496.MainActivity, com.example.localadmin.g11_ajh265_kex496.TankClientActivity_], permissionQualifiedNames=[android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE], applicationClassName=null, libraryProject=false, debugabble=false, minSdkVersion=16, maxSdkVersion=-1, targetSdkVersion=23]
+13:24:00.39 [Daemon worker Thread 9] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.localadmin.g11_ajh265_kex496.R
+13:24:00.44 [Daemon worker Thread 9] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+13:24:00.59 [Daemon worker Thread 9] INFO  o.a.p.ModelValidator:42 - Validating elements
+13:24:00.59 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.localadmin.g11_ajh265_kex496.TankClientActivity]
+13:24:00.61 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with EBeanHandler: [com.example.localadmin.g11_ajh265_kex496.rest.Controller, com.example.localadmin.g11_ajh265_kex496.rest.RestClientPoller, com.example.localadmin.g11_ajh265_kex496.rest.UIUpdate, com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter]
+13:24:00.62 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [onClick(android.view.View)]
+13:24:00.64 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with SystemServiceHandler: [inflater]
+13:24:00.65 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with RestHandler: [com.example.localadmin.g11_ajh265_kex496.rest.BulletZoneRestClient]
+13:24:00.70 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with GetHandler: [grid()]
+13:24:00.70 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with PostHandler: [join()]
+13:24:00.71 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with PutHandler: [move(long,byte), turn(long,byte), fire(long)]
+13:24:00.71 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with DeleteHandler: [leave(long)]
+13:24:00.71 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with RestServiceHandler: [restClient, restClient]
+13:24:00.72 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with BeanHandler: [myImplementation, mGridAdapter, myPoller, myUIUpdate, mGridAdapter]
+13:24:00.72 [Daemon worker Thread 9] ERROR o.a.h.AnnotationHelper:127 - @org.androidannotations.annotations.Bean can only be used on an element annotated with @org.androidannotations.annotations.EBean
+13:24:00.72 [Daemon worker Thread 9] WARN  o.a.p.ModelValidator:69 - Element BeanHandler unvalidated by 
+13:24:00.75 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [afterViewInjection()]
+13:24:00.75 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with UiThreadHandler: [updateDisplay()]
+13:24:00.75 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with BackgroundHandler: [turn(android.view.View), fire(), move(android.view.View), startPoll(), getField(), joinAsync()]
+13:24:00.85 [Daemon worker Thread 9] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+13:24:00.85 [Daemon worker Thread 9] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EActivityHandler: [com.example.localadmin.g11_ajh265_kex496.TankClientActivity]
+13:24:00.105 [Daemon worker Thread 9] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EBeanHandler: [com.example.localadmin.g11_ajh265_kex496.rest.RestClientPoller, com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter, com.example.localadmin.g11_ajh265_kex496.rest.Controller, com.example.localadmin.g11_ajh265_kex496.rest.UIUpdate]
+13:24:00.106 [Daemon worker Thread 9] DEBUG o.a.p.ModelProcessor:160 - Processing root elements RestHandler: [com.example.localadmin.g11_ajh265_kex496.rest.BulletZoneRestClient]
+13:24:00.109 [Daemon worker Thread 9] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+13:24:00.120 [Daemon worker Thread 9] INFO  o.a.AndroidAnnotationProcessor:250 - Number of files generated by AndroidAnnotations: 6
+13:24:00.121 [Daemon worker Thread 9] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+13:24:00.122 [Daemon worker Thread 9] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.TankClientActivity_
+13:24:00.146 [Daemon worker Thread 9] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter_
+13:24:00.149 [Daemon worker Thread 9] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.rest.BulletZoneRestClient_
+13:24:00.160 [Daemon worker Thread 9] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.rest.Controller_
+13:24:00.168 [Daemon worker Thread 9] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.rest.RestClientPoller_
+13:24:00.172 [Daemon worker Thread 9] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.rest.UIUpdate_
+13:24:00.178 [Daemon worker Thread 9] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 153 ms], [Generate Sources = 58 ms], [Process Annotations = 44 ms], [Validate Annotations = 18 ms], [Find R Classes = 12 ms], [Extract Annotations = 7 ms], [Extract Manifest = 4 ms], 
+13:24:00.178 [Daemon worker Thread 9] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+13:24:29.11 [Daemon worker Thread 9] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.1 with options {androidManifestFile=/Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/build/intermediates/manifests/full/debug/AndroidManifest.xml}
+13:24:29.59 [Daemon worker Thread 9] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 14 annotations on 25 elements
+13:24:29.64 [Daemon worker Thread 9] DEBUG o.a.h.AndroidManifestFinder:98 - AndroidManifest.xml file found with specified path: /Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/build/intermediates/manifests/full/debug/AndroidManifest.xml
+13:24:29.67 [Daemon worker Thread 9] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.localadmin.g11_ajh265_kex496, componentQualifiedNames=[com.example.localadmin.g11_ajh265_kex496.MainActivity, com.example.localadmin.g11_ajh265_kex496.TankClientActivity_], permissionQualifiedNames=[android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE], applicationClassName=null, libraryProject=false, debugabble=false, minSdkVersion=16, maxSdkVersion=-1, targetSdkVersion=23]
+13:24:29.68 [Daemon worker Thread 9] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.localadmin.g11_ajh265_kex496.R
+13:24:29.71 [Daemon worker Thread 9] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+13:24:29.82 [Daemon worker Thread 9] INFO  o.a.p.ModelValidator:42 - Validating elements
+13:24:29.82 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.localadmin.g11_ajh265_kex496.TankClientActivity]
+13:24:29.85 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with EBeanHandler: [com.example.localadmin.g11_ajh265_kex496.rest.Controller, com.example.localadmin.g11_ajh265_kex496.rest.RestClientPoller, com.example.localadmin.g11_ajh265_kex496.rest.UIUpdate, com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter]
+13:24:29.85 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [onClick(android.view.View)]
+13:24:29.87 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with SystemServiceHandler: [inflater]
+13:24:29.88 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with RestHandler: [com.example.localadmin.g11_ajh265_kex496.rest.BulletZoneRestClient]
+13:24:29.92 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with GetHandler: [grid()]
+13:24:29.93 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with PostHandler: [join()]
+13:24:29.93 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with PutHandler: [move(long,byte), turn(long,byte), fire(long)]
+13:24:29.93 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with DeleteHandler: [leave(long)]
+13:24:29.93 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with RestServiceHandler: [restClient, restClient]
+13:24:29.94 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with BeanHandler: [myController, mGridAdapter, myPoller, myUIUpdate, mGridAdapter]
+13:24:29.94 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with AfterViewsHandler: [afterViewInjection()]
+13:24:29.94 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with UiThreadHandler: [updateDisplay()]
+13:24:29.94 [Daemon worker Thread 9] DEBUG o.a.p.ModelValidator:62 - Validating with BackgroundHandler: [turn(android.view.View), fire(), move(android.view.View), startPoll(), getField(), joinAsync()]
+13:24:29.101 [Daemon worker Thread 9] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+13:24:29.101 [Daemon worker Thread 9] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EActivityHandler: [com.example.localadmin.g11_ajh265_kex496.TankClientActivity]
+13:24:29.118 [Daemon worker Thread 9] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EBeanHandler: [com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter, com.example.localadmin.g11_ajh265_kex496.rest.Controller, com.example.localadmin.g11_ajh265_kex496.rest.RestClientPoller, com.example.localadmin.g11_ajh265_kex496.rest.UIUpdate]
+13:24:29.120 [Daemon worker Thread 9] DEBUG o.a.p.ModelProcessor:160 - Processing root elements RestHandler: [com.example.localadmin.g11_ajh265_kex496.rest.BulletZoneRestClient]
+13:24:29.123 [Daemon worker Thread 9] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+13:24:29.131 [Daemon worker Thread 9] INFO  o.a.AndroidAnnotationProcessor:250 - Number of files generated by AndroidAnnotations: 6
+13:24:29.133 [Daemon worker Thread 9] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+13:24:29.134 [Daemon worker Thread 9] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.TankClientActivity_
+13:24:29.153 [Daemon worker Thread 9] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter_
+13:24:29.155 [Daemon worker Thread 9] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.rest.BulletZoneRestClient_
+13:24:29.166 [Daemon worker Thread 9] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.rest.Controller_
+13:24:29.172 [Daemon worker Thread 9] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.rest.RestClientPoller_
+13:24:29.175 [Daemon worker Thread 9] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.localadmin.g11_ajh265_kex496.rest.UIUpdate_
+13:24:29.181 [Daemon worker Thread 9] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 122 ms], [Generate Sources = 50 ms], [Process Annotations = 36 ms], [Validate Annotations = 13 ms], [Find R Classes = 9 ms], [Extract Annotations = 4 ms], [Extract Manifest = 4 ms], 
+13:24:29.181 [Daemon worker Thread 9] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
