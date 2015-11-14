@@ -13,6 +13,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import com.example.localadmin.g11_ajh265_kex496.R.id;
 import com.example.localadmin.g11_ajh265_kex496.rest.Controller_;
+import com.example.localadmin.g11_ajh265_kex496.sensor.ShakeListenerManager_;
 import org.androidannotations.api.SdkVersionHelper;
 import org.androidannotations.api.builder.ActivityIntentBuilder;
 import org.androidannotations.api.view.HasViews;
@@ -37,6 +38,7 @@ public final class TankClientActivity_
     private void init_(Bundle savedInstanceState) {
         OnViewChangedNotifier.registerOnViewChangedListener(this);
         myController = Controller_.getInstance_(this);
+        sd = ShakeListenerManager_.getInstance_(this);
     }
 
     @Override

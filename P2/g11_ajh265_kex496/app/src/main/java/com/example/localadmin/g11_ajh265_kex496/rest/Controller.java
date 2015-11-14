@@ -5,6 +5,9 @@ import android.view.View;
 
 import com.example.localadmin.g11_ajh265_kex496.R;
 import com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter;
+import com.example.localadmin.g11_ajh265_kex496.factory.LogicTank;
+import com.example.localadmin.g11_ajh265_kex496.factory.Tank;
+import com.example.localadmin.g11_ajh265_kex496.sensor.ShakeListener;
 import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
 
 import org.androidannotations.annotations.Background;
@@ -31,9 +34,14 @@ public class Controller {
     @Bean
     UIUpdate myUIUpdate;
 
+
+
     private static final String TAG = "TankClientActivity";
     private long tankId;
     private int direction;
+
+    private LogicTank myLogicTank;
+
 
 
     public Controller( ){
@@ -44,19 +52,17 @@ public class Controller {
     public void implement( View myGridView ){
 
         myPoller.addObserver( myUIUpdate);
-
         tankId = myUIUpdate.join( myGridView );
         myPoller.startPoll();
+        myLogicTank = Tank.getMyLogicTank();
+
     }
 
 
     public void clicked( View v ){
 
-
         if( v.getId() == R.id.buttonFire ){
-
             fire();
-
         }
 
         else {
@@ -67,14 +73,10 @@ public class Controller {
             }
 
             else{
-
-
                 move(v);
             }
 
         }
-
-
         // SystemClock.sleep(500);
     }
 
@@ -84,29 +86,17 @@ public class Controller {
     public void turn( View v ) {
 
 
-        GridWrapper grid;
+
+
         try {
-            grid = restClient.grid();
-            int[][] myArray = grid.getGrid();
 
-            for( int x = 0 ; x < 16; x ++ ){
-                for( int y = 0; y < 16; y ++ ) {
+            Log.d(TAG, "TURNED");
+            direction = (int) myLogicTank.getDirection();
+            Log.d(TAG, "TURNED");
 
-                    long id = myArray[x][y];
-
-
-                    long compTankid = ((id % 10000000) - ( id % 10000 ) ) / 10000;
-                    if( compTankid == tankId ){
-
-                        direction = (int )id % 10;
-                        // Log.d(TAG, "%d"  + (int) dir );
-                    }
-
-
-                }
-            }
 
             int dir = 0;
+
             if( v.getId() == R.id.buttonTurnLeft ){
 
                 switch( direction ){
@@ -160,8 +150,6 @@ public class Controller {
             }
 
 
-
-
         } catch (Exception e) {
 
         }
@@ -201,7 +189,14 @@ public class Controller {
 
         byte b = (byte )i;
         try {
-            restClient.move(tankId, b);
+
+            direction = (int) myLogicTank.getDirection();
+
+            if( ( direction == 0  ||  direction == 4 ) && ( i == 0  ||  i == 4 ) )
+                restClient.move(tankId, b);
+
+            if( ( direction == 2  ||  direction == 6 ) && ( i == 2  ||  i == 6 ) )
+                restClient.move(tankId, b);
 
         }catch (Exception e) {
 

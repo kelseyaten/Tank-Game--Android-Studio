@@ -5,10 +5,12 @@ import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import java.util.Observable;
+
 /**
  * Created by localadmin on 10/31/15.
  */
-public abstract class CellObject {
+public abstract class CellObject extends Observable{
 
     public int getValue() {
         return value;

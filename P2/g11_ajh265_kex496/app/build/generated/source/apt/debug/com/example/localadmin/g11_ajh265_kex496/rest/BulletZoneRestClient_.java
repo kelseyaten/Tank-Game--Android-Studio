@@ -87,12 +87,12 @@ public final class BulletZoneRestClient_
     }
 
     @Override
-    public BooleanWrapper turn(long tankId, byte direction) {
+    public BooleanWrapper move(long tankId, byte direction) {
         try {
             HashMap<String, Object> urlVariables = new HashMap<String, Object>();
             urlVariables.put("tankId", tankId);
             urlVariables.put("direction", direction);
-            return restTemplate.exchange(rootUrl.concat("/{tankId}/turn/{direction}"), HttpMethod.PUT, null, BooleanWrapper.class, urlVariables).getBody();
+            return restTemplate.exchange(rootUrl.concat("/{tankId}/move/{direction}"), HttpMethod.PUT, null, BooleanWrapper.class, urlVariables).getBody();
         } catch (NestedRuntimeException e) {
             if (restErrorHandler!= null) {
                 restErrorHandler.onRestClientExceptionThrown(e);
@@ -104,12 +104,12 @@ public final class BulletZoneRestClient_
     }
 
     @Override
-    public BooleanWrapper move(long tankId, byte direction) {
+    public BooleanWrapper turn(long tankId, byte direction) {
         try {
             HashMap<String, Object> urlVariables = new HashMap<String, Object>();
             urlVariables.put("tankId", tankId);
             urlVariables.put("direction", direction);
-            return restTemplate.exchange(rootUrl.concat("/{tankId}/move/{direction}"), HttpMethod.PUT, null, BooleanWrapper.class, urlVariables).getBody();
+            return restTemplate.exchange(rootUrl.concat("/{tankId}/turn/{direction}"), HttpMethod.PUT, null, BooleanWrapper.class, urlVariables).getBody();
         } catch (NestedRuntimeException e) {
             if (restErrorHandler!= null) {
                 restErrorHandler.onRestClientExceptionThrown(e);
