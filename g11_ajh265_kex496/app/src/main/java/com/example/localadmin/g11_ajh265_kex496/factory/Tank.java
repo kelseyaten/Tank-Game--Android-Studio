@@ -7,6 +7,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.localadmin.g11_ajh265_kex496.R;
+import com.example.localadmin.g11_ajh265_kex496.util.TankInfoWrapper;
+
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * Created by localadmin on 10/31/15.
@@ -21,12 +25,14 @@ public class Tank extends CellObject {
     public ImageView getMyView() {
         return myView;
     }
-
     public void setMyView(ImageView myView) {
         this.myView = myView;
     }
-
     ImageView myView;
+    Observer myObserver;
+
+
+    static LogicTank myLogicTank = new LogicTank();
 
 
     public Tank(long x){
@@ -51,6 +57,17 @@ public class Tank extends CellObject {
         return myTankId;
     }
 
+    public static LogicTank getMyLogicTank(){
+
+        return myLogicTank;
+    }
+
+
+
+
+
+
+
 
     public int display(  long paramid  ){
 
@@ -58,6 +75,9 @@ public class Tank extends CellObject {
         int resource = 0;
 
         if( paramid == id ) {
+
+            this.deleteObservers();
+            this.addObserver( myLogicTank );
 
             switch((int)direction){
                 case 0: resource = R.drawable.tankup;
@@ -68,8 +88,20 @@ public class Tank extends CellObject {
                     break;
                 case 6: resource = R.drawable.tankleft;
                     break;
+
+
+
+
             }
 
+            TankInfoWrapper myWrapper = new TankInfoWrapper();
+            myWrapper.setDirection( direction );
+            myWrapper.setId( id );
+            myWrapper.setLife( life );
+
+
+            setChanged();
+            notifyObservers( myWrapper );
 
             return resource;
         }else{

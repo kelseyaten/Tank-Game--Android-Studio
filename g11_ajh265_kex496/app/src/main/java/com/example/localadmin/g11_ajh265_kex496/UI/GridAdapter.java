@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import com.example.localadmin.g11_ajh265_kex496.R;
 import com.example.localadmin.g11_ajh265_kex496.factory.BattleField;
+import com.example.localadmin.g11_ajh265_kex496.factory.CellObject;
+import com.example.localadmin.g11_ajh265_kex496.factory.LogicTank;
 import com.example.localadmin.g11_ajh265_kex496.factory.Tank;
 import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
 
@@ -27,12 +29,21 @@ import org.androidannotations.annotations.SystemService;
 public class GridAdapter extends BaseAdapter {
 
     private final Object monitor = new Object();
+
     @SystemService
     protected LayoutInflater inflater;
-    private int[][] mEntities = new int[16][16];
 
+    private int[][] mEntities = new int[16][16];
     private long tankId;
     private BattleField myField;
+
+
+    public  CellObject[][] getObjArray(){
+      return myField.getObjArray();
+    }
+
+
+
 
 
 

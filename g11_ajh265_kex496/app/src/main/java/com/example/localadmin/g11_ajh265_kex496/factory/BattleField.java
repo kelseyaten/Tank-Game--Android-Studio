@@ -8,6 +8,10 @@ import android.widget.ImageView;
 import com.example.localadmin.g11_ajh265_kex496.R;
 import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
 
+import org.androidannotations.annotations.Bean;
+
+import java.util.Observer;
+
 /**
  * Created by localadmin on 10/31/15.
  */
@@ -16,6 +20,13 @@ public class BattleField {
 
     EntityFactory[][] myArray = new EntityFactory[16][16];
     CellObject[][] objectArray = new CellObject[16][16];
+
+
+
+    public  CellObject[][] getObjArray(){
+
+        return objectArray;
+    }
 
 
 
@@ -31,7 +42,6 @@ public class BattleField {
 
 
 
-
     public int setView( int x, int y, long val, long tankId ){
 
         EntityFactory myFactory = new EntityFactory();
@@ -40,17 +50,12 @@ public class BattleField {
 
             ((Tank)objectArray[x][y]).setMyTanksId(tankId);
 
-
             return objectArray[x][y].display( tankId );
         }else{
 
             return objectArray[x][y].display( val );
 
         }
-
-
-
-
 
     }
 
