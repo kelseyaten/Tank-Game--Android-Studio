@@ -1,21 +1,15 @@
 package com.example.localadmin.g11_ajh265_kex496.UI;
 
-import android.content.Context;
-import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridLayout;
-import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.localadmin.g11_ajh265_kex496.R;
 import com.example.localadmin.g11_ajh265_kex496.factory.BattleField;
-import com.example.localadmin.g11_ajh265_kex496.factory.CellObject;
-import com.example.localadmin.g11_ajh265_kex496.factory.LogicTank;
-import com.example.localadmin.g11_ajh265_kex496.factory.Tank;
+import com.example.localadmin.g11_ajh265_kex496.uiobjects.CellObject;
 import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
 
 import org.androidannotations.annotations.EBean;
@@ -41,10 +35,6 @@ public class GridAdapter extends BaseAdapter {
     public  CellObject[][] getObjArray(){
       return myField.getObjArray();
     }
-
-
-
-
 
 
     public void setTankID( long x ){
@@ -89,7 +79,8 @@ public class GridAdapter extends BaseAdapter {
         long val = mEntities[row][col];
         if (convertView instanceof ImageView) {
             synchronized (monitor) {
-                ((ImageView) convertView).setImageResource( myField.setView( row, col, val, tankId)  );
+
+                ((ImageView) convertView).setImageResource( myField.setView( row, col, val, tankId) );
             }
         }
 

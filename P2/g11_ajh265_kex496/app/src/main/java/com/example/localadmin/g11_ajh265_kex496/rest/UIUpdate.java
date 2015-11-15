@@ -3,9 +3,6 @@ package com.example.localadmin.g11_ajh265_kex496.rest;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
-import android.widget.GridView;
-
-import com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter;
 import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
 
 import org.androidannotations.annotations.Background;
@@ -25,13 +22,16 @@ public class UIUpdate implements Observer {
 
     private long tankId;
     private static final String TAG = "TankClientActivity";
-    private GridWrapper grid;
 
     @RestService
     BulletZoneRestClient restClient;
 
+
+    private GridWrapper grid = new GridWrapper();
+
     @Bean
-    protected GridAdapter mGridAdapter;
+    GridUpdater myUpdater;
+
 
 
     public UIUpdate ( ){
@@ -44,9 +44,9 @@ public class UIUpdate implements Observer {
         SystemClock.sleep(500);
         getField();
         SystemClock.sleep(500);
-        mGridAdapter.updateList(grid);
-        mGridAdapter.setTankID(tankId);
-        ((GridView)myGridView).setAdapter(mGridAdapter);
+
+
+        myUpdater.init(myGridView, tankId, grid );
 
         return tankId;
 
@@ -64,13 +64,6 @@ public class UIUpdate implements Observer {
         }
     }
 
-    @org.androidannotations.annotations.UiThread
-    public void updateDisplay(){
-
-        mGridAdapter.updateList(grid);
-        mGridAdapter.notifyDataSetChanged();
-
-    }
 
 
 
@@ -90,7 +83,7 @@ public class UIUpdate implements Observer {
     public void update(Observable observable, Object data) {
 
         getField();
-        updateDisplay();
+        myUpdater.updateDisplay( grid );
 
     }
 }

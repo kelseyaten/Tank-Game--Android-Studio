@@ -1,6 +1,9 @@
 package com.example.localadmin.g11_ajh265_kex496.util;
 
 
+import org.androidannotations.annotations.EBean;
+
+
 public class GridWrapper {
     private int[][] grid;
 

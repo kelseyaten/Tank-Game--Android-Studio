@@ -1,16 +1,8 @@
 package com.example.localadmin.g11_ajh265_kex496.factory;
 
-import android.content.Context;
-import android.widget.GridLayout;
-import android.widget.GridView;
-import android.widget.ImageView;
-
-import com.example.localadmin.g11_ajh265_kex496.R;
+import com.example.localadmin.g11_ajh265_kex496.uiobjects.CellObject;
+import com.example.localadmin.g11_ajh265_kex496.uiobjects.Tank;
 import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
-
-import org.androidannotations.annotations.Bean;
-
-import java.util.Observer;
 
 /**
  * Created by localadmin on 10/31/15.
@@ -41,12 +33,11 @@ public class BattleField {
     }
 
 
-
     public int setView( int x, int y, long val, long tankId ){
 
         EntityFactory myFactory = new EntityFactory();
         objectArray[x][y] = myFactory.createEntity((int)val, tankId);
-        if( objectArray[x][y] instanceof Tank ){
+        if( objectArray[x][y] instanceof Tank){
 
             ((Tank)objectArray[x][y]).setMyTanksId(tankId);
 
