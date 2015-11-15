@@ -21,7 +21,6 @@ import org.androidannotations.annotations.EActivity;
 public class TankClientActivity extends AppCompatActivity implements ShakeListener {
 
 
-
     @Bean
     Controller myController;
 
@@ -63,7 +62,6 @@ public class TankClientActivity extends AppCompatActivity implements ShakeListen
         myController.clicked( v );
 
     }
-
 
     @Override
     public void onShake() {

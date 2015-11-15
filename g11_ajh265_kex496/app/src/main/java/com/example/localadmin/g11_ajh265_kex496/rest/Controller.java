@@ -5,10 +5,9 @@ import android.view.View;
 
 import com.example.localadmin.g11_ajh265_kex496.R;
 import com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter;
-import com.example.localadmin.g11_ajh265_kex496.factory.LogicTank;
-import com.example.localadmin.g11_ajh265_kex496.factory.Tank;
-import com.example.localadmin.g11_ajh265_kex496.sensor.ShakeListener;
-import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
+import com.example.localadmin.g11_ajh265_kex496.constraint.ConstraintHandler;
+import com.example.localadmin.g11_ajh265_kex496.constraint.LogicTank;
+import com.example.localadmin.g11_ajh265_kex496.uiobjects.Tank;
 
 import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Bean;
@@ -26,35 +25,27 @@ public class Controller {
     BulletZoneRestClient restClient;
 
     @Bean
-    protected GridAdapter mGridAdapter;
-
-    @Bean
     RestClientPoller myPoller;
 
     @Bean
     UIUpdate myUIUpdate;
 
+    @Bean
+    ConstraintHandler myConstraintHandler;
 
 
-    private static final String TAG = "TankClientActivity";
-    private long tankId;
-    private int direction;
-
-    private LogicTank myLogicTank;
-
+    private String TAG = "TankClientActivity";
 
 
     public Controller( ){
 
-        tankId = -1;
     }
 
     public void implement( View myGridView ){
 
         myPoller.addObserver( myUIUpdate);
-        tankId = myUIUpdate.join( myGridView );
+        myUIUpdate.join( myGridView );
         myPoller.startPoll();
-        myLogicTank = Tank.getMyLogicTank();
 
     }
 
@@ -74,6 +65,7 @@ public class Controller {
 
             else{
                 move(v);
+
             }
 
         }
@@ -86,63 +78,24 @@ public class Controller {
     public void turn( View v ) {
 
 
-
-
         try {
-
-            Log.d(TAG, "TURNED");
-            direction = (int) myLogicTank.getDirection();
-            Log.d(TAG, "TURNED");
-
 
             int dir = 0;
 
             if( v.getId() == R.id.buttonTurnLeft ){
 
-                switch( direction ){
-
-                    case 2:
-                        dir = 0;
-                        break;
-                    case 0:
-                        dir = 6;
-                        break;
-                    case 6:
-                        dir = 4;
-                        break;
-                    case 4:
-                        dir = 2;
-                        break;
-
-                }
-
+               dir = myConstraintHandler.turnLeft();
 
             }else{
 
-                switch( direction ){
-
-                    case 2:
-                        dir = 4;
-                        break;
-                    case 4:
-                        dir = 6;
-                        break;
-                    case 6:
-                        dir = 0;
-                        break;
-                    case 0:
-                        dir = 2;
-                        break;
-
-                }
-
+                dir = myConstraintHandler.turnRight();
 
             }
 
             byte b = (byte )dir;
             try {
-                Log.d(TAG, "TURNED");
-                restClient.turn(tankId, b);
+
+                restClient.turn( myConstraintHandler.getTankId(), b);
 
             }catch (Exception e) {
 
@@ -162,7 +115,7 @@ public class Controller {
     public void fire( ) {
 
         try {
-            restClient.fire(tankId);
+            restClient.fire(myConstraintHandler.getTankId());
         }catch (Exception e) {
             Log.d(TAG, "FAILED");
         }
@@ -190,13 +143,8 @@ public class Controller {
         byte b = (byte )i;
         try {
 
-            direction = (int) myLogicTank.getDirection();
-
-            if( ( direction == 0  ||  direction == 4 ) && ( i == 0  ||  i == 4 ) )
-                restClient.move(tankId, b);
-
-            if( ( direction == 2  ||  direction == 6 ) && ( i == 2  ||  i == 6 ) )
-                restClient.move(tankId, b);
+                if( myConstraintHandler.move( i ))
+                restClient.move(myConstraintHandler.getTankId(), b);
 
         }catch (Exception e) {
 

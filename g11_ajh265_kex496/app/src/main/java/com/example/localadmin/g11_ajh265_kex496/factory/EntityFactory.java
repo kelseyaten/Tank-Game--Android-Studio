@@ -1,6 +1,11 @@
 package com.example.localadmin.g11_ajh265_kex496.factory;
 
-import android.content.Entity;
+import com.example.localadmin.g11_ajh265_kex496.uiobjects.Bullet;
+import com.example.localadmin.g11_ajh265_kex496.uiobjects.CellObject;
+import com.example.localadmin.g11_ajh265_kex496.uiobjects.DestructableWall;
+import com.example.localadmin.g11_ajh265_kex496.uiobjects.EmptyCell;
+import com.example.localadmin.g11_ajh265_kex496.uiobjects.IndestructableWall;
+import com.example.localadmin.g11_ajh265_kex496.uiobjects.Tank;
 
 /**
  * Created by localadmin on 10/31/15.
@@ -42,6 +47,11 @@ public class EntityFactory {
             myObject = new Tank( n );
             myObject.setValue( n );
             ((Tank)myObject).setMyTanksId(id );
+
+        }else{
+
+            myObject = new EmptyCell();
+            myObject.setValue( n );
 
         }
 
