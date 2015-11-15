@@ -9,6 +9,8 @@ import com.example.localadmin.g11_ajh265_kex496.util.TankInfoWrapper;
 import java.util.Observer;
 
 /**
+ *
+ * tank object
  * Created by localadmin on 10/31/15.
  */
 public class Tank extends CellObject {
@@ -18,19 +20,17 @@ public class Tank extends CellObject {
     long direction;
     long myTankId;
 
-    public ImageView getMyView() {
-        return myView;
-    }
-    public void setMyView(ImageView myView) {
-        this.myView = myView;
-    }
-    ImageView myView;
-    Observer myObserver;
+
 
 
     static LogicTank myLogicTank = new LogicTank();
 
 
+    /**
+     *
+     * constructor
+     * @param x id of the tank being created
+     */
     public Tank(long x){
 
         direction = x % 10;
@@ -39,19 +39,12 @@ public class Tank extends CellObject {
 
     }
 
-    public long getDirection(){
-        return direction;
-    }
 
     public void setMyTanksId( long x ){
         myTankId = x;
 
     }
 
-    public long getMyTanksId(  ){
-
-        return myTankId;
-    }
 
     public static LogicTank getMyLogicTank(){
 
@@ -63,6 +56,11 @@ public class Tank extends CellObject {
 
 
 
+    /**
+     * returns id of image to display the object
+     * @return the display id
+     * @param paramid tank id passed in
+     */
 
 
     public int display(  long paramid  ){

@@ -13,6 +13,8 @@ import org.androidannotations.annotations.EBean;
 
 
 /**
+ *
+ * manages the shakelistener. Found from  online resources.
  * Created by localadmin on 11/14/15.
  */
 @EBean

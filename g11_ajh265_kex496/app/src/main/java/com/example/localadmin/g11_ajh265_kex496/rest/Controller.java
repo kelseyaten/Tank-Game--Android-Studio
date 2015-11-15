@@ -13,8 +13,11 @@ import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EBean;
 import org.androidannotations.annotations.rest.RestService;
+import org.junit.Test;
 
 /**
+ *
+ * controls all movements of tank ( calls move fire turn etc. )
  * Created by localadmin on 11/10/15.
  */
 
@@ -33,13 +36,18 @@ public class Controller {
     @Bean
     ConstraintHandler myConstraintHandler;
 
-
     private String TAG = "TankClientActivity";
 
 
-    public Controller( ){
+    public Controller( ) {
+
 
     }
+    /**
+     *
+     * sets up the contorller
+     * @param myGridView sets up controller w/ particular gridview
+     */
 
     public void implement( View myGridView ){
 
@@ -49,6 +57,12 @@ public class Controller {
 
     }
 
+
+    /**
+     *
+     * decides what to do when button is clicked
+     * @param v what view was clicked
+     */
 
     public void clicked( View v ){
 
@@ -73,7 +87,11 @@ public class Controller {
     }
 
 
-
+    /**
+     *
+     * turns the tank
+     * @param v the button that was clicked
+     */
     @Background
     public void turn( View v ) {
 
@@ -111,11 +129,19 @@ public class Controller {
 
     }
 
+
+    /**
+     *
+     * fires the tank
+     */
     @Background
     public void fire( ) {
 
         try {
-            restClient.fire(myConstraintHandler.getTankId());
+
+                if( myConstraintHandler.canFire() )
+                restClient.fire(myConstraintHandler.getTankId());
+
         }catch (Exception e) {
             Log.d(TAG, "FAILED");
         }
@@ -123,33 +149,118 @@ public class Controller {
     }
 
 
+    /**
+     *
+     * moves the tank
+     * @param v the button that was clicked
+     */
     @Background
     public void move( View v ) {
 
-        int i = 0;
+        action myAction = null;
+
+
         if( v.getId() == R.id.buttonUp ){
-            i = 0;
+            myAction = action.UP;
         }
         if( v.getId() == R.id.buttonLeft) {
-            i = 6;
+            myAction = action.LEFT;
         }
         if( v.getId() == R.id.buttonRight ){
-            i = 2;
+            myAction = action.RIGHT;
         }
         if( v.getId() == R.id.buttonDown ){
-            i = 4;
+            myAction = action.DOWN;
         }
 
+        int i = getEnumValue( myAction );
         byte b = (byte )i;
         try {
-
-                if( myConstraintHandler.move( i ))
+                if( myConstraintHandler.move(i))
                 restClient.move(myConstraintHandler.getTankId(), b);
 
         }catch (Exception e) {
 
 
         }
+
+    }
+
+
+    /**
+     * gets int value from enum
+     * @param m the enum
+     * @return the value
+     */
+
+    public int getEnumValue( action m ){
+
+       if( m == action.UP ){
+
+           return 0;
+       }else if( m == action.DOWN ){
+
+           return 4;
+       }else if( m == action.LEFT ){
+
+           return 6;
+       }else if( m == action.RIGHT ){
+           return 2;
+       }
+
+        return -1;
+    }
+
+
+    public enum action {
+      UP, DOWN, LEFT, RIGHT
+    }
+
+
+
+
+
+    @Test
+    public void test(){
+
+
+        int i = 0;
+        byte b = (byte )i;
+        try {
+            if( myConstraintHandler.move(i))
+                restClient.move(myConstraintHandler.getTankId(), b);
+
+        }catch (Exception e) {
+
+
+        }
+
+
+        try {
+
+            int dir = 0;
+
+            dir = myConstraintHandler.turnLeft();
+
+            b = (byte )dir;
+            try {
+
+                restClient.turn( myConstraintHandler.getTankId(), b);
+
+            }catch (Exception e) {
+
+                Log.d(TAG, "FAILED");
+            }
+
+
+        } catch (Exception e) {
+
+        }
+
+
+        if( myConstraintHandler.canFire() )
+            restClient.fire(myConstraintHandler.getTankId());
+
 
     }
 

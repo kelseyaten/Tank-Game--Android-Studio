@@ -8,6 +8,8 @@ import com.example.localadmin.g11_ajh265_kex496.uiobjects.IndestructableWall;
 import com.example.localadmin.g11_ajh265_kex496.uiobjects.Tank;
 
 /**
+ *
+ * Factory Pattern to create Cell Objects
  * Created by localadmin on 10/31/15.
  */
 public class EntityFactory {
@@ -15,11 +17,24 @@ public class EntityFactory {
 
     CellObject myObject;
 
+    /**
+     * default constructor
+     */
+
     public EntityFactory(){
 
 
     }
 
+
+    /**
+     *
+     *
+     * creates a cell object
+     * @param n what the cell object is going to be
+     * @param id the id of the cell object
+     * @return the cell object that was created
+     */
     public CellObject createEntity( int n, long id ){
 
         if( n == 0 ){

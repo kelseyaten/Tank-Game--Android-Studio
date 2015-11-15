@@ -6,24 +6,22 @@ import com.example.localadmin.g11_ajh265_kex496.R;
 import com.example.localadmin.g11_ajh265_kex496.uiobjects.CellObject;
 
 /**
+ * the wall class.
  * Created by localadmin on 10/31/15.
  */
 public class Wall extends CellObject {
 
-    public ImageView getMyView() {
-        return myView;
-    }
 
-    public void setMyView(ImageView myView) {
-        this.myView = myView;
-    }
-
-    ImageView myView;
 
     public Wall(){
 
 
     }
+    /**
+     * returns id of image to display the object
+     * @return the display id
+     */
+
 
     public int display( long id ){
 
@@ -33,7 +31,6 @@ public class Wall extends CellObject {
 
     public int updateDisplay( long paramid  ){
 
-        myView.setImageResource(R.drawable.wall);
         return R.drawable.wall;
     }
 
