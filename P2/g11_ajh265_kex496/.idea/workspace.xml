@@ -10,66 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="e70980fb-6690-4662-b343-2a8058fec612" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/test" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/constraint/BulletObserver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/test/ExampleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/factory/BattleField.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/factory/BattleField.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/rest/BulletZoneRestClient_.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/rest/BulletZoneRestClient_.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/factory/EntityFactory.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/factory/EntityFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$mipmap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/TankClientActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/TankClientActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/TankClientActivity_.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/localadmin/g11_ajh265_kex496/TankClientActivity_.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/factory/BattleField.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/factory/BattleField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/Bullet.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/Bullet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/example/localadmin/g11_ajh265_kex496/rest/BulletZoneRestClient_.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/example/localadmin/g11_ajh265_kex496/rest/BulletZoneRestClient_.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/CellObject.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/CellObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/constraint/ConstraintHandler.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/constraint/ConstraintHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/rest/Controller.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/rest/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/DestructableWall.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/DestructableWall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/EmptyCell.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/EmptyCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/factory/EntityFactory.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/factory/EntityFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/com/example/localadmin/g11_ajh265_kex496/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/localadmin/g11_ajh265_kex496/ExampleUnitTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/UI/GridAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/UI/GridAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/rest/GridUpdater.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/rest/GridUpdater.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/IndestructableWall.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/IndestructableWall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/constraint/LogicTank.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/constraint/LogicTank.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/localadmin/g11_ajh265_kex496/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/example/localadmin/g11_ajh265_kex496/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/rest/RestClientPoller.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/rest/RestClientPoller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/sensor/ShakeListener.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/sensor/ShakeListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/sensor/ShakeListenerManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/sensor/ShakeListenerManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/Tank.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/Tank.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/TankClientActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/TankClientActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/rest/UIUpdate.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/rest/UIUpdate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/Wall.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/Wall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/androidannotations.log" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/androidannotations.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="g11_ajh265_kex496.iws" />
@@ -118,12 +58,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndestructableWall.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndestructableWall.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/IndestructableWall.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6084656">
+            <state vertical-scroll-proportion="0.0">
               <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BulletObserver.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/constraint/BulletObserver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.2116402">
+              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2375,7 +2327,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447608724171</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finished Javadocs">
+      <created>1447616043042</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1447616043042</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2388,7 +2346,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="1" />
+    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2519,16 +2477,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/constraint/BulletObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47089946">
-          <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2678,9 +2626,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/uiobjects/IndestructableWall.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6084656">
+        <state vertical-scroll-proportion="0.0">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/localadmin/g11_ajh265_kex496/constraint/BulletObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2116402">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
