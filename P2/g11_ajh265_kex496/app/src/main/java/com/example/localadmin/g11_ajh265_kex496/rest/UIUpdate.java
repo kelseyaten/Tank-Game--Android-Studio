@@ -3,6 +3,8 @@ package com.example.localadmin.g11_ajh265_kex496.rest;
 import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
+
+import com.example.localadmin.g11_ajh265_kex496.constraint.BulletObserver;
 import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
 
 import org.androidannotations.annotations.Background;
@@ -14,10 +16,13 @@ import java.util.Observable;
 import java.util.Observer;
 
 /**
+ *
+ * has access to resclient methods join and getfield. when triggered by the poller it calls the
+ * gridupdater to do its thing.
  * Created by localadmin on 11/10/15.
  */
 @EBean
-public class UIUpdate implements Observer {
+public class UIUpdate extends Observable implements Observer  {
 
 
     private long tankId;
@@ -32,12 +37,26 @@ public class UIUpdate implements Observer {
     @Bean
     GridUpdater myUpdater;
 
+    public static BulletObserver myBulletObserver = new BulletObserver();
 
 
+    /**
+     *
+     * default constructor
+     */
     public UIUpdate ( ){
 
+      this.addObserver( myBulletObserver );
     }
 
+
+    /**
+     *
+     * joins the game
+     *
+     * @param myGridView the game field to display
+     * @return the players tanks id
+     */
     public long join( View myGridView ){
 
         joinAsync();
@@ -53,11 +72,19 @@ public class UIUpdate implements Observer {
     }
 
 
+    /**
+     *
+     * updates the gamefield grid
+     */
 
     @Background
     void getField() {
         try {
+
             grid = restClient.grid();
+            setChanged();
+            notifyObservers( grid );
+
 
         } catch (Exception e) {
 
@@ -65,8 +92,11 @@ public class UIUpdate implements Observer {
     }
 
 
-
-
+    /**
+     *
+     * joins the game
+     *
+     */
     @Background
     void joinAsync() {
         try {

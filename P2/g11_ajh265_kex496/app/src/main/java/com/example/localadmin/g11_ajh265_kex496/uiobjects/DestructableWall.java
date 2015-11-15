@@ -3,6 +3,7 @@ package com.example.localadmin.g11_ajh265_kex496.uiobjects;
 import com.example.localadmin.g11_ajh265_kex496.R;
 
 /**
+ * destructable wall cell objct
  * Created by localadmin on 10/31/15.
  */
 public class DestructableWall extends Wall {
@@ -14,9 +15,13 @@ public class DestructableWall extends Wall {
         life = n;
     }
 
+    /**
+     * returns id of image to display the object
+     * @return the display id
+     */
+
     public int updateDisplay( long paramid  ){
 
-        myView.setImageResource(R.drawable.destructablewall);
         return R.drawable.destructablewall;
     }
 

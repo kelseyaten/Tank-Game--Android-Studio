@@ -1,5 +1,6 @@
 package com.example.localadmin.g11_ajh265_kex496;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -10,15 +11,19 @@ import android.view.View;
 import com.example.localadmin.g11_ajh265_kex496.rest.Controller;
 import com.example.localadmin.g11_ajh265_kex496.sensor.ShakeListener;
 import com.example.localadmin.g11_ajh265_kex496.sensor.ShakeListenerManager;
+import com.example.localadmin.g11_ajh265_kex496.uiobjects.Tank;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 
+import java.util.Observable;
+import java.util.Observer;
+
 
 @EActivity
-public class TankClientActivity extends AppCompatActivity implements ShakeListener {
+public class TankClientActivity extends AppCompatActivity implements ShakeListener{
 
 
     @Bean
@@ -69,4 +74,5 @@ public class TankClientActivity extends AppCompatActivity implements ShakeListen
        myController.fire();
 
     }
+
 }

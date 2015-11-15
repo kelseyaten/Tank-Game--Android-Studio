@@ -11,6 +11,9 @@ import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EBean;
 
 /**
+ *
+ *
+ * updates the gridview to reflect current state of the board
  * Created by localadmin on 11/14/15.
  */
 @EBean
@@ -26,7 +29,14 @@ public class GridUpdater {
     }
 
 
-
+    /**
+     * initilizes the gridadapter
+     *
+     *
+     * @param myGridView the gridview to update to
+     * @param id the tanks id
+     * @param mgrid the gridwrapper with the content
+     */
     public void init( View myGridView, long id, GridWrapper mgrid){
 
 
@@ -37,6 +47,11 @@ public class GridUpdater {
     }
 
 
+    /**
+     *
+     *
+     * @param mgrid updates the gridview to this gridwrappers data
+     */
     @org.androidannotations.annotations.UiThread
     public void updateDisplay( GridWrapper mgrid ){
 

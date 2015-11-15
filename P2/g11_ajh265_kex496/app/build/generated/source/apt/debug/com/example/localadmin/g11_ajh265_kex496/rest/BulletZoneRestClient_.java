@@ -71,23 +71,6 @@ public final class BulletZoneRestClient_
     }
 
     @Override
-    public BooleanWrapper move(long tankId, byte direction) {
-        try {
-            HashMap<String, Object> urlVariables = new HashMap<String, Object>();
-            urlVariables.put("tankId", tankId);
-            urlVariables.put("direction", direction);
-            return restTemplate.exchange(rootUrl.concat("/{tankId}/move/{direction}"), HttpMethod.PUT, null, BooleanWrapper.class, urlVariables).getBody();
-        } catch (NestedRuntimeException e) {
-            if (restErrorHandler!= null) {
-                restErrorHandler.onRestClientExceptionThrown(e);
-                return null;
-            } else {
-                throw e;
-            }
-        }
-    }
-
-    @Override
     public BooleanWrapper turn(long tankId, byte direction) {
         try {
             HashMap<String, Object> urlVariables = new HashMap<String, Object>();
@@ -110,6 +93,23 @@ public final class BulletZoneRestClient_
             HashMap<String, Object> urlVariables = new HashMap<String, Object>();
             urlVariables.put("tankId", tankId);
             return restTemplate.exchange(rootUrl.concat("/{tankId}/fire"), HttpMethod.PUT, null, BooleanWrapper.class, urlVariables).getBody();
+        } catch (NestedRuntimeException e) {
+            if (restErrorHandler!= null) {
+                restErrorHandler.onRestClientExceptionThrown(e);
+                return null;
+            } else {
+                throw e;
+            }
+        }
+    }
+
+    @Override
+    public BooleanWrapper move(long tankId, byte direction) {
+        try {
+            HashMap<String, Object> urlVariables = new HashMap<String, Object>();
+            urlVariables.put("tankId", tankId);
+            urlVariables.put("direction", direction);
+            return restTemplate.exchange(rootUrl.concat("/{tankId}/move/{direction}"), HttpMethod.PUT, null, BooleanWrapper.class, urlVariables).getBody();
         } catch (NestedRuntimeException e) {
             if (restErrorHandler!= null) {
                 restErrorHandler.onRestClientExceptionThrown(e);

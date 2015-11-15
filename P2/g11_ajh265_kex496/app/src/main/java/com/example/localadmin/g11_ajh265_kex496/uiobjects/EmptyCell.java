@@ -6,6 +6,7 @@ import com.example.localadmin.g11_ajh265_kex496.R;
 import com.example.localadmin.g11_ajh265_kex496.uiobjects.CellObject;
 
 /**
+ * empty cell cellobject.
  * Created by localadmin on 10/31/15.
  */
 public class EmptyCell extends CellObject {
@@ -26,11 +27,22 @@ public class EmptyCell extends CellObject {
     }
 
 
+    /**
+     * returns id of image to display the object
+     * @return the display id
+     */
+
     public int display( long id ){
 
         return R.drawable.grass;
 
+
     }
+    /**
+     * returns id of image to display the object
+     * @return the display id
+     */
+
 
     public int updateDisplay( long paramid  ){
 

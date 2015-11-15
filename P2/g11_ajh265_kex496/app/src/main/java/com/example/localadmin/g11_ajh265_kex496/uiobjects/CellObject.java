@@ -8,6 +8,8 @@ import android.widget.ImageView;
 import java.util.Observable;
 
 /**
+ *
+ * abstract class for the specific cell objects to extend.
  * Created by localadmin on 10/31/15.
  */
 public abstract class CellObject extends Observable{
@@ -21,8 +23,6 @@ public abstract class CellObject extends Observable{
     }
     int value;
 
-    public abstract ImageView getMyView();
-    public abstract void setMyView( ImageView v );
     public abstract int display( long id );
     public abstract int updateDisplay( long paramid  );
 

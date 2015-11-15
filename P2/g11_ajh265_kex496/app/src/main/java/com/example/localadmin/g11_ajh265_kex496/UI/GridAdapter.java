@@ -16,6 +16,9 @@ import org.androidannotations.annotations.EBean;
 import org.androidannotations.annotations.SystemService;
 
 /**
+ *
+ *
+ * adapter class that deals with adapting a gamegrid to the gridview
  * Created by localadmin on 11/2/15.
  */
 
@@ -37,11 +40,24 @@ public class GridAdapter extends BaseAdapter {
     }
 
 
+    /**
+     *
+     * sets the tankId fo the users tank
+     * @param x the tankid
+     */
+
     public void setTankID( long x ){
 
         tankId = x;
     }
 
+
+    /**
+     *
+     * updates the gridwrapper which it is reading from
+     *
+     * @param myGrid
+     */
     public void updateList(GridWrapper myGrid ) {
 
         myField = new BattleField( myGrid );

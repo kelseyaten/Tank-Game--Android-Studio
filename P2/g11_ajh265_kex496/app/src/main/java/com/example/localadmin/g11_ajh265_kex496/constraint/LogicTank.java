@@ -1,16 +1,21 @@
 package com.example.localadmin.g11_ajh265_kex496.constraint;
 
+import android.content.Intent;
 import android.util.Log;
 
+import com.example.localadmin.g11_ajh265_kex496.TankClientActivity_;
 import com.example.localadmin.g11_ajh265_kex496.util.TankInfoWrapper;
 
 import java.util.Observable;
 import java.util.Observer;
 
 /**
+ *
+ *
+ * tank that watches users tank ( its an observer). allows for constraint checking.
  * Created by localadmin on 11/10/15.
  */
-public class LogicTank implements Observer {
+public class LogicTank  implements Observer  {
 
 
 
@@ -42,6 +47,11 @@ public class LogicTank implements Observer {
         this.life = life;
     }
 
+    /**
+     *
+     * default constructor of tank
+     */
+
     public LogicTank (){
 
         direction = 0;
@@ -57,6 +67,8 @@ public class LogicTank implements Observer {
         direction = ((TankInfoWrapper) data).getDirection();
         id = ((TankInfoWrapper) data).getId();
         life = ((TankInfoWrapper) data).getLife();
+
+
 
     }
 }

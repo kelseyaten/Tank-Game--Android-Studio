@@ -17,10 +17,14 @@ import org.androidannotations.annotations.rest.RestService;
 import java.util.Observable;
 
 /**
+ *
+ * continuously polls and notifies its observers that it has polled
  * Created by localadmin on 11/9/15.
  */
 @EBean
 public class RestClientPoller extends Observable {
+
+
 
 
     private boolean gameRunning = true;
@@ -30,6 +34,9 @@ public class RestClientPoller extends Observable {
 
     }
 
+    /**
+     * starts the polling
+     */
     @Background
     void startPoll() {
         while(gameRunning){
