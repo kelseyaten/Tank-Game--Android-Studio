@@ -28,6 +28,7 @@ public class RestClientPoller extends Observable {
 
 
     private boolean gameRunning = true;
+
     public RestClientPoller( ){
 
         startPoll();

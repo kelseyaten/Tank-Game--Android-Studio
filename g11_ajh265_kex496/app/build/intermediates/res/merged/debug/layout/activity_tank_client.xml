@@ -24,6 +24,8 @@
             tools:listitem="@layout/field_item"/>
 
 
+
+
     <RelativeLayout
         android:id="@+id/LinearLayoutControl"
         android:layout_width="match_parent"
@@ -41,6 +43,15 @@
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/life"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/buttonUp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/holo_red_light"
+            android:text="♥ ♥ ♥"/>
 
         <ImageButton
             android:id="@+id/buttonUp"
@@ -88,25 +99,10 @@
             android:layout_above="@+id/buttonDown"
             android:layout_toRightOf="@+id/buttonFire" />
 
-        <ImageButton
-            android:id="@+id/buttonTurnRight"
-            android:layout_width="60dp"
-            android:layout_height="80dp"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/turnright"
-            android:scaleType="fitCenter"
-            android:layout_above="@+id/buttonRight"
-             />
 
-        <ImageButton
-            android:id="@+id/buttonTurnLeft"
-            android:layout_width="60dp"
-            android:layout_height="80dp"
-            android:layout_alignParentLeft="true"
-            android:src="@drawable/turnleft"
-            android:scaleType="fitCenter"
-            android:layout_above="@+id/buttonLeft"
-            />
+
+
+
 
 
 

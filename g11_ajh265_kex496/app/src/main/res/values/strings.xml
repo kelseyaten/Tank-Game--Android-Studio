@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">g11_ajh265_kex496</string>
     <string name="title_activity_tank_client">TankClientActivity</string>
+    <string name="title_activity_replay">ReplayActivity</string>
 </resources>
