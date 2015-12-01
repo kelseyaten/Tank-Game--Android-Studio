@@ -4,7 +4,9 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 
+
 import com.example.localadmin.g11_ajh265_kex496.constraint.BulletObserver;
+import com.example.localadmin.g11_ajh265_kex496.database.GridWrapperDatab;
 import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
 
 import org.androidannotations.annotations.Background;
@@ -32,7 +34,11 @@ public class UIUpdate extends Observable implements Observer  {
     BulletZoneRestClient restClient;
 
 
+
+
     private GridWrapper grid = new GridWrapper();
+
+    public static GridWrapperDatab gridUpdater = new GridWrapperDatab();
 
     @Bean
     GridUpdater myUpdater;
@@ -46,7 +52,13 @@ public class UIUpdate extends Observable implements Observer  {
      */
     public UIUpdate ( ){
 
+        gridUpdater.setMyWrapper(grid);
       this.addObserver( myBulletObserver );
+    }
+
+    public static GridWrapperDatab getmyGridWrapperDatab(){
+
+        return gridUpdater;
     }
 
 
@@ -86,6 +98,7 @@ public class UIUpdate extends Observable implements Observer  {
             notifyObservers( grid );
 
 
+
         } catch (Exception e) {
 
         }
@@ -113,7 +126,12 @@ public class UIUpdate extends Observable implements Observer  {
     public void update(Observable observable, Object data) {
 
         getField();
-        myUpdater.updateDisplay( grid );
+        myUpdater.updateDisplay(grid);
+
+        gridUpdater.setMyWrapper(grid);
+        gridUpdater.notifyme();
+
+
 
     }
 }

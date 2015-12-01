@@ -15,6 +15,10 @@ import java.util.Observer;
  */
 public class Tank extends CellObject {
 
+    public long getId() {
+        return id;
+    }
+
     long id;
     long life;
     long direction;
@@ -52,10 +56,6 @@ public class Tank extends CellObject {
     }
 
 
-
-
-
-
     /**
      * returns id of image to display the object
      * @return the display id
@@ -82,17 +82,12 @@ public class Tank extends CellObject {
                     break;
                 case 6: resource = R.drawable.tankleft;
                     break;
-
-
-
-
             }
 
             TankInfoWrapper myWrapper = new TankInfoWrapper();
             myWrapper.setDirection( direction );
             myWrapper.setId( id );
             myWrapper.setLife( life );
-
 
             setChanged();
             notifyObservers( myWrapper );

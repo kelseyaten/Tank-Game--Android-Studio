@@ -72,62 +72,13 @@ public class Controller {
 
         else {
 
-            if (v.getId() == R.id.buttonTurnLeft || v.getId() == R.id.buttonTurnRight) {
-
-                turn(v);
-            }
-
-            else{
-                move(v);
-
-            }
+            move(v);
 
         }
         // SystemClock.sleep(500);
     }
 
 
-    /**
-     *
-     * turns the tank
-     * @param v the button that was clicked
-     */
-    @Background
-    public void turn( View v ) {
-
-
-        try {
-
-            int dir = 0;
-
-            if( v.getId() == R.id.buttonTurnLeft ){
-
-               dir = myConstraintHandler.turnLeft();
-
-            }else{
-
-                dir = myConstraintHandler.turnRight();
-
-            }
-
-            byte b = (byte )dir;
-            try {
-
-                restClient.turn( myConstraintHandler.getTankId(), b);
-
-            }catch (Exception e) {
-
-                Log.d(TAG, "FAILED");
-            }
-
-
-        } catch (Exception e) {
-
-        }
-
-
-
-    }
 
 
     /**
@@ -138,6 +89,7 @@ public class Controller {
     public void fire( ) {
 
         try {
+
 
                 if( myConstraintHandler.canFire() )
                 restClient.fire(myConstraintHandler.getTankId());
@@ -176,8 +128,13 @@ public class Controller {
         int i = getEnumValue( myAction );
         byte b = (byte )i;
         try {
-                if( myConstraintHandler.move(i))
-                restClient.move(myConstraintHandler.getTankId(), b);
+                if( myConstraintHandler.move(i)){
+                    restClient.move(myConstraintHandler.getTankId(), b);
+                }else{
+
+                    restClient.turn(  myConstraintHandler.getTankId(), b );
+                }
+
 
         }catch (Exception e) {
 

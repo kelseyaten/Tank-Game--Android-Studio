@@ -14,6 +14,8 @@ import android.view.ViewGroup.LayoutParams;
 import com.example.localadmin.g11_ajh265_kex496.R.id;
 import com.example.localadmin.g11_ajh265_kex496.rest.Controller_;
 import com.example.localadmin.g11_ajh265_kex496.sensor.ShakeListenerManager_;
+import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
+import org.androidannotations.api.BackgroundExecutor;
 import org.androidannotations.api.SdkVersionHelper;
 import org.androidannotations.api.builder.ActivityIntentBuilder;
 import org.androidannotations.api.view.HasViews;
@@ -156,37 +158,61 @@ public final class TankClientActivity_
                 );
             }
         }
-        {
-            View view = hasViews.findViewById(id.buttonTurnLeft);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        TankClientActivity_.this.onClick(view);
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(id.buttonTurnRight);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        TankClientActivity_.this.onClick(view);
-                    }
-
-                }
-                );
-            }
-        }
         afterViewInjection();
+    }
+
+    @Override
+    public void getFromDatabase() {
+        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
+
+
+            @Override
+            public void execute() {
+                try {
+                    TankClientActivity_.super.getFromDatabase();
+                } catch (Throwable e) {
+                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+                }
+            }
+
+        }
+        );
+    }
+
+    @Override
+    public void insertIntoDatabase(final GridWrapper gs) {
+        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
+
+
+            @Override
+            public void execute() {
+                try {
+                    TankClientActivity_.super.insertIntoDatabase(gs);
+                } catch (Throwable e) {
+                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+                }
+            }
+
+        }
+        );
+    }
+
+    @Override
+    public void insertGrid(final byte[] blob) {
+        BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
+
+
+            @Override
+            public void execute() {
+                try {
+                    TankClientActivity_.super.insertGrid(blob);
+                } catch (Throwable e) {
+                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+                }
+            }
+
+        }
+        );
     }
 
     public static class IntentBuilder_
