@@ -141,7 +141,8 @@ public class GridAdapter extends BaseAdapter {
         int row = position / 16;
         int col = position % 16;
 
-        long val = mEntities[row][col];
+        long val = mEntities[row] [col];
+
         if (convertView instanceof ImageView) {
             synchronized (monitor) {
 

@@ -4,7 +4,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context="com.example.localadmin.g11_ajh265_kex496.ReplayActivity">
+    tools:context="com.example.localadmin.g11_ajh265_kex496.ReplayActivity"
+    android:background="@drawable/abc_popup_background_mtrl_mult"
+    android:backgroundTint="#5b3b2a">
+
+    <RelativeLayout
+        android:id="@+id/outer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    <GridView
+        android:id="@+id/gridView222"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+
+        android:numColumns="16"
+        tools:listitem="@layout/field_item"/>
+
+    <RelativeLayout
+        android:id="@+id/LinearLayoutControl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+        <Button
+            android:id="@+id/fast"
+            android:text="FAST"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:tag="4"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/med"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true" />
+
+
+        <Button
+            android:id="@+id/med"
+            android:text="MEDIUM"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:tag="5"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/slow"
+            android:text="SLOW"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:tag="6"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/med"
+
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+   </RelativeLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>

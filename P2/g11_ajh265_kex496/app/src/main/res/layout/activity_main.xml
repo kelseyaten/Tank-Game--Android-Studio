@@ -4,7 +4,9 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@drawable/abc_popup_background_mtrl_mult"
+    android:backgroundTint="#5b3b2a">
 
 
     <Button
@@ -12,8 +14,42 @@
         android:layout_height="wrap_content"
         android:text="PLAY!"
         android:id="@+id/button"
-        android:layout_centerVertical="true"
+
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="start"
         android:clickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome To Crash Starring Sandra Bullock's Tank Game!"
+        android:id="@+id/textView"
+
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="30dip"
+        android:textIsSelectable="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Control Your Tank Using the Arrow Keys. You Have Three Lives"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="20dip"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="When You Die Press Any Button To Watch An Instant Replay"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="20dip"
+        android:textIsSelectable="true" />
+
 </RelativeLayout>

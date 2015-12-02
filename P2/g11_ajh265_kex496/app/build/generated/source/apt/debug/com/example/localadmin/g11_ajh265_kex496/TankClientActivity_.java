@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import com.example.localadmin.g11_ajh265_kex496.R.id;
+import com.example.localadmin.g11_ajh265_kex496.database.ReplayStructure_;
 import com.example.localadmin.g11_ajh265_kex496.rest.Controller_;
 import com.example.localadmin.g11_ajh265_kex496.sensor.ShakeListenerManager_;
 import com.example.localadmin.g11_ajh265_kex496.util.GridWrapper;
@@ -40,6 +41,7 @@ public final class TankClientActivity_
     private void init_(Bundle savedInstanceState) {
         OnViewChangedNotifier.registerOnViewChangedListener(this);
         myController = Controller_.getInstance_(this);
+        myReplayStructure = ReplayStructure_.getInstance_(this);
         sd = ShakeListenerManager_.getInstance_(this);
     }
 
@@ -162,14 +164,14 @@ public final class TankClientActivity_
     }
 
     @Override
-    public void getFromDatabase() {
+    public void insertGrid(final byte[] blob) {
         BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
 
 
             @Override
             public void execute() {
                 try {
-                    TankClientActivity_.super.getFromDatabase();
+                    TankClientActivity_.super.insertGrid(blob);
                 } catch (Throwable e) {
                     Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
                 }
@@ -198,14 +200,14 @@ public final class TankClientActivity_
     }
 
     @Override
-    public void insertGrid(final byte[] blob) {
+    public void getFromDatabase() {
         BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
 
 
             @Override
             public void execute() {
                 try {
-                    TankClientActivity_.super.insertGrid(blob);
+                    TankClientActivity_.super.getFromDatabase();
                 } catch (Throwable e) {
                     Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
                 }
