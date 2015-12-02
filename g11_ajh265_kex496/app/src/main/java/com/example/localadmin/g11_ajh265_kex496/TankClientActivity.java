@@ -16,6 +16,7 @@ import com.example.localadmin.g11_ajh265_kex496.UI.GridAdapter;
 import com.example.localadmin.g11_ajh265_kex496.database.DBHelper;
 import com.example.localadmin.g11_ajh265_kex496.database.DataBaseHelper;
 import com.example.localadmin.g11_ajh265_kex496.database.GridWrapperDatab;
+import com.example.localadmin.g11_ajh265_kex496.database.ReplayStructure;
 import com.example.localadmin.g11_ajh265_kex496.rest.Controller;
 import com.example.localadmin.g11_ajh265_kex496.rest.UIUpdate;
 import com.example.localadmin.g11_ajh265_kex496.sensor.ShakeListener;
@@ -46,6 +47,9 @@ public class TankClientActivity extends AppCompatActivity implements ShakeListen
     @Bean
     Controller myController;
 
+    @Bean
+    static ReplayStructure myReplayStructure;
+
 
     @Bean
     ShakeListenerManager sd;
@@ -63,7 +67,6 @@ public class TankClientActivity extends AppCompatActivity implements ShakeListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tank_client);
-
 
 
 
@@ -99,6 +102,7 @@ public class TankClientActivity extends AppCompatActivity implements ShakeListen
 
 
         if( GridAdapter.islocated == false ){
+
             Intent myIntent = new Intent(getBaseContext(), ReplayActivity_.class);
             startActivity(myIntent);
         }
@@ -129,13 +133,17 @@ public class TankClientActivity extends AppCompatActivity implements ShakeListen
            // if(    GridAdapter.islocated != false )
             //insertIntoDatabase(UIUpdate.getmyGridWrapperDatab().getMyWrapper() );
 
+            if( GridAdapter.islocated != false ) {
+                myReplayStructure.insert(UIUpdate.getmyGridWrapperDatab().getMyWrapper());
+            }
+
 
         }else{
 
             Log.d("HIT", "help");
             long life = Tank.getMyLogicTank().getLife();
             TextView myView = (TextView) findViewById(R.id.life);
-            if (life == 0) {
+            if( life == 1 ) {
 
                 myView.setText("♡♡♡");
             }

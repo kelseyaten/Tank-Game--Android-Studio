@@ -4,7 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context="com.example.localadmin.g11_ajh265_kex496.TankClientActivity">
+    tools:context="com.example.localadmin.g11_ajh265_kex496.TankClientActivity"
+    android:background="@drawable/abc_popup_background_mtrl_mult"
+    android:backgroundTint="#5b3b2a">
 
 
 
@@ -113,4 +115,4 @@
 
 
 </android.support.design.widget.CoordinatorLayout>
-<!-- From: file:/Users/localadmin/Desktop/P2WorkingCopy/g11_ajh265_kex496/app/src/main/res/layout/activity_tank_client.xml -->
+<!-- From: file:/Users/localadmin/Desktop/checkedout/P2/g11_ajh265_kex496/app/src/main/res/layout/activity_tank_client.xml -->
